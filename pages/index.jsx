@@ -21,7 +21,7 @@ const Home = () => {
   useEffect(() => {
     dispatch(getPlanets());
     dispatch(getVehicles());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className=" max-w-screen-md w-full">
