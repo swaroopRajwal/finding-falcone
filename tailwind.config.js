@@ -8,11 +8,17 @@ module.exports = {
     extend: {
       colors: {
         teal: colors.teal,
+        amber: colors.teal,
         gray: colors.trueGray,
         darkTeal: '#1B4641',
+        yellow: '#FFAB4C',
+        dark: '#142F43',
+        pink: '#FF5F7E',
+        tailwindpink: colors.pink,
+        violet: '#B000B9'
       },
       screens: {
-        'sm': '680px',
+        'sm': '730px',
       }
     },
   },
@@ -22,6 +28,5 @@ module.exports = {
   plugins: [
     require('tailwindcss-debug-screens'),
     require('@tailwindcss/forms'),
-    require('daisyui'),
   ],
 }

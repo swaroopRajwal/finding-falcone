@@ -9,5 +9,17 @@
 }
 
 .title {
-  @apply text-center text-teal-500 font-semibold text-2xl;
+  @apply text-center text-dark font-semibold text-2xl;
+}
+
+.subtitle {
+  @apply text-center text-dark font-semibold text-lg pb-3;
+}
+
+.resulttext {
+  @apply text-dark font-semibold text-lg;
+}
+
+.button {
+  @apply bg-pink text-dark font-semibold tracking-wider text-lg px-4 py-2 rounded-sm focus:outline-none hover:bg-tailwindpink-500 focus:ring-pink focus:ring-2 ring-offset-2 ring-offset-dark;
 }
