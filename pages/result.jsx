@@ -38,7 +38,7 @@ const ResultPage = () => {
 
   useEffect(() => {
     dispatch(getToken(selection));
-  }, []);
+  }, [dispatch, selection]);
   return (
     <div className=" max-w-screen-md w-full">
       <PrimaryWrapper>

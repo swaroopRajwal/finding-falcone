@@ -28,7 +28,7 @@ const InfoText = ({
         })
       );
     }
-  }, [showPlanet, showVehicle]);
+  }, [showPlanet, showVehicle, journey, planet, vehicle, dispatch]);
   return (
     <>
       {showPlanet && (
