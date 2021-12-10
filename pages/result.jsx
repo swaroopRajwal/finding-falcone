@@ -45,7 +45,7 @@ const ResultPage = () => {
         <p className="title">Finding Falcone!!!</p>
       </PrimaryWrapper>
       <PrimaryWrapper>
-        {result.show && (
+        {result.show ? (
           <>
             {result.status ? (
               <Success
@@ -59,7 +59,7 @@ const ResultPage = () => {
               <Fail />
             )}
           </>
-        )}
+        ) : <p className='resulttext'>Loading...</p>}
       </PrimaryWrapper>
       <div className="w-full flex justify-center">
         <button className="button" onClick={clickHandler}>

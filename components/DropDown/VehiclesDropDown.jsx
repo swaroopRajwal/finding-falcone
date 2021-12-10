@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment, useEffect, useRef, useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { SelectorIcon } from '@heroicons/react/solid'
 import { useDispatch } from 'react-redux'
@@ -9,6 +9,7 @@ const VehicleDropDown = ({data, journey}) => {
   const [selectedItem, setSelectedItem] = useState({name: 'select a vehicle'})
   const [previousSelected, setPreviousSelected] = useState(null);
   const dispatch = useDispatch();
+  // const option = useRef(null);
   const clickHandler = async(vehicle) => {
     dispatch(updateSelectedVehicle({journey: journey, vehicle: vehicle.name}))
     dispatch(updateVehicle({name:vehicle.name, count:-1}));
