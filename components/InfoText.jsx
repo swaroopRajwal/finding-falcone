@@ -1,6 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import planets from "../lib/redux/reducers/planets";
 import { updateTime } from "../lib/redux/reducers/result";
 
 const InfoText = ({
@@ -16,11 +17,13 @@ const InfoText = ({
   const vehicle = useSelector((state) =>
     state.vehicles.vehicles.filter((item) => item.name === selectedVehicle)
   );
+  const [journeyFail, setJourneyFail] = useState(false);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (showVehicle && showPlanet) {
+      setJourneyFail(planet[0].distance > vehicle[0].max_distance);
       dispatch(
         updateTime({
           journey: journey,
@@ -46,6 +49,7 @@ const InfoText = ({
           Time: {planet[0].distance / vehicle[0].speed}
         </p>
       ) : null}
+      {journeyFail && <p className='text-tailwindpink-800 font-medium py-2 tracking-wider'>This journey would fail, your vehicle can't go this far</p>}
     </>
   );
 };

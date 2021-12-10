@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { SelectorIcon } from "@heroicons/react/solid";
 import { useDispatch } from "react-redux";
@@ -46,19 +46,18 @@ const PlanetDropDown = ({ data, journey }) => {
                   <>
                     <button
                       onClick={() => clickHandler(item)}
-                      className="flex items-center justify-between w-full py-2 px-4 focus:outline-none focus:ring-violet"
+                      className={`flex items-center justify-between w-full py-2 px-4 focus:outline-none focus:ring-violet`}
                       disabled={selectedPlanets.find(
                         (selectedPlanet) => selectedPlanet.planet === item.name
                       )}
                     >
-                      <p className="text-dark text-xs sm:font-medium sm:text-sm">
+                      <p className={`text-dark text-xs sm:font-medium sm:text-sm ${selectedPlanets.find((selectedPlanet) => selectedPlanet.planet === item.name) ? ' text-tailwindpink-800 ' : null}`}>
                         {item.name}
                       </p>
                       <p className="text-xs text-dark ">
                         {item.distance} megamiles
                       </p>
-                    </button>
-                  </>
+                    </button>                  </>
                 </Listbox.Option>
               ))}
             </Listbox.Options>
