@@ -45,7 +45,7 @@ const ResultPage = () => {
   }, [dispatch, selection]);
 
   return (
-    <div className=" max-w-screen-md w-full">
+    <div className=" max-w-screen-md w-full pt-14">
       <PrimaryWrapper>
         <p className="title">Finding Falcone!!!</p>
       </PrimaryWrapper>
