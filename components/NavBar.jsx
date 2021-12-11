@@ -97,9 +97,11 @@ const TutorialModal = () => {
 
 const NavBar = () => {
   return(
-    <div className='fixed top-0 right-0 left-0 p-3 bg-yellow flex justify-between items-center z-50'>
-      <p className='font-bold text-lg text-dark'>Finding Falcone</p>
-      <TutorialModal/>
+    <div className='fixed top-0 right-0 left-0 p-3 bg-yellow z-50'>
+      <div className='flex justify-between items-center max-w-screen-md mx-auto'>
+        <p className='font-bold text-lg text-dark'>Finding Falcone</p>
+        <TutorialModal/>
+      </div>
     </div>
   )
 }
