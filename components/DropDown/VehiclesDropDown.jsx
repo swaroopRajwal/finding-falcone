@@ -50,7 +50,7 @@ const VehicleDropDown = ({data, journey}) => {
                       className='w-full py-2 px-2 sm:px-4 text-left flex justify-between sm:justify-evenly items-center gap-[2px]'
                       disabled={item.total_no === 0}
                     >
-                      <p className='text-dark sm:font-medium text-xs sm:text-sm'>{item.name} ({item.total_no})</p>
+                      <p className='text-dark sm:font-medium text-xs sm:text-base'>{item.name} ({item.total_no})</p>
                       <p className='text-xs text-dark '>max distance:{item.max_distance}</p>
                       <p className='text-xs text-dark '>speed:{item.speed}</p>
                     </button>
