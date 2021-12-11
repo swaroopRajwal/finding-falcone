@@ -40,7 +40,7 @@ const TutorialModal = () => {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Dialog.Overlay className="fixed inset-0 bg-dark bg-opacity-25 backdrop-blur-sm" />
+              <Dialog.Overlay className="fixed inset-0 bg-dark bg-opacity-40 backdrop-blur-sm pb-10" />
             </Transition.Child>
 
             {/* This element is to trick the browser into centering the modal contents. */}

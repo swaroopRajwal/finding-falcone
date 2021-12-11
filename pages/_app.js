@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import { Toaster } from "react-hot-toast";
 import NavBar from "../components/NavBar";
 import { useEffect, useState } from "react";
+import { NextSeo } from "next-seo";
 
 function MyApp({ Component, pageProps }) {
   const [screenSize, setScreenSize] = useState();
@@ -15,6 +16,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
       <AppWrapper>
+        <NextSeo
+          title='Finding Falcone | Geektrust challenge'
+          description='Evil King Shan has conquered Planet Falicornia. Queen Al Falcone somehow escaped Falicornia. Help King Shan find her. Select Planets to search the Queen and corresponding Vehicles. '
+        />
         <Toaster
           position={`${screenSize < 700 ? 'top-right' : 'top-center'}`}
           toastOptions={{
