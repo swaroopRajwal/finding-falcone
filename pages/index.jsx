@@ -24,7 +24,8 @@ const Home = () => {
   }, [dispatch]);
 
   return (
-    <div className=" max-w-screen-md w-full">
+    <div className=" max-w-screen-md w-full pt-14 relative">
+
       <PrimaryWrapper>
         <p className="title">
           Select a Planet and a Space vehicle for each planet
