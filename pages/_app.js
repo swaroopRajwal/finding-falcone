@@ -19,6 +19,13 @@ function MyApp({ Component, pageProps }) {
         <NextSeo
           title='Finding Falcone | Geektrust challenge'
           description='Evil King Shan has conquered Planet Falicornia. Queen Al Falcone somehow escaped Falicornia. Help King Shan find her. Select Planets to search the Queen and corresponding Vehicles. '
+          additionalMetaTags={[{
+            name:'keywords',
+            content:'finding falcone, finding falcon, falcon geektrust solution, falcone geektrust, geektrust, frontend challenge'
+          }, {
+            name:'application-name',
+            content:'finding falcone'
+          }]}
         />
         <Toaster
           position={`${screenSize < 700 ? 'top-right' : 'top-center'}`}
