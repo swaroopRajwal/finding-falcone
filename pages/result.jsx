@@ -24,6 +24,8 @@ const Fail = () => {
   );
 };
 
+let dontDispatch = false;
+
 const ResultPage = () => {
   const dispatch = useDispatch();
   const selection = useSelector((state) => state.result.selected);
@@ -33,12 +35,15 @@ const ResultPage = () => {
   const clickHandler = (e) => {
     e.preventDefault();
     dispatch(clear());
+    dontDispatch = true;
     router.push("/");
   };
 
   useEffect(() => {
+    if(!selection[0].planet) return;
     dispatch(getToken(selection));
   }, [dispatch, selection]);
+
   return (
     <div className=" max-w-screen-md w-full">
       <PrimaryWrapper>

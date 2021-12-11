@@ -33,7 +33,7 @@ const PlanetDropDown = ({ data, journey }) => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Listbox.Options className="absolute w-full py-1 mt-1 overflow-auto text-base bg-pink rounded-sm shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm z-50">
+            <Listbox.Options className="absolute w-full py-1 mt-1 overflow-auto text-base bg-pink rounded-sm shadow-lg max-h-72 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm z-50">
               {data.map((item, itemIdx) => (
                 <Listbox.Option
                   key={itemIdx}
@@ -51,7 +51,7 @@ const PlanetDropDown = ({ data, journey }) => {
                         (selectedPlanet) => selectedPlanet.planet === item.name
                       )}
                     >
-                      <p className={`text-dark text-xs sm:font-medium sm:text-sm ${selectedPlanets.find((selectedPlanet) => selectedPlanet.planet === item.name) ? ' text-tailwindpink-800 ' : null}`}>
+                      <p className={`text-dark text-xs sm:font-medium sm:text-base ${selectedPlanets.find((selectedPlanet) => selectedPlanet.planet === item.name) ? ' text-tailwindpink-800 ' : null}`}>
                         {item.name}
                       </p>
                       <p className="text-xs text-dark ">
